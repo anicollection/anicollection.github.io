@@ -1,0 +1,15 @@
+{{#animationList}}
+var element = $('#square');
+{{\n}}
+// the animation starts
+element.addClass('{{className}}');
+{{\n}}
+// do something when animation ends
+element.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+ {{\n}}
+ // trick to execute the animation again
+  $(e.target).removeClass('{{className}}');
+{{\n}}
+});
+{{\n}}
+{{/animationList}}

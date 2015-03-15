@@ -1,0 +1,1 @@
+!function(){function a(a){var b={};return b.getCategories=function(){return a.get("config/data/db_category_list.json")},b.getAdds=function(){return a.get("config/adds/adds.json")},b.getAnimation=function(b){return b=b||"bounce",a.get("config/data/db_"+b+".json")},b}angular.module("collection").factory("localAPIRetrieve",["$http",a])}();

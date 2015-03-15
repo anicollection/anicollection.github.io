@@ -1,0 +1,50 @@
+<div class="row">
+ <div class="m-collection-title-items clearfix"
+      ng-show='filteredAnimation.length > 0'
+      ng-repeat="category in categoryList"
+      after-repeat-directive
+  >
+  <h3 class="col-md-12 group-title">{{category.name}}</h3>
+      <div class="m-divider-vertical col-md-12 mb-small">
+
+      </div>
+  <div class="col-md-2 col-sm-3 col-xs-4 m-square-item"
+
+       ng-repeat="animation in filteredAnimation =
+                (category.animationList | filter: searchFilter)"
+      ng-mouseover="onMouseOverItemSquare($event)"
+      ng-mouseleave="onMouseLeaveItemSquare($event)"
+      ng-class="{'selected': animation.isSelected}"
+      on-finish-render="afterRepeatDirective"
+       >
+    <div class="caption caption-top" title="Add"
+      ng-mouseover="onMouseOverCaption($event)"
+      ng-mouseleave="onMouseLeaveCaption($event)"
+      ng-click="add(animation)"
+      ng-hide="animation.isSelected"
+    >
+      <i class="icon glyphicon glyphicon-plus-sign" aria-hidden="true"></i>
+    </div>
+    <div class="caption caption-top" title="Remove"
+      ng-mouseover="onMouseOverCaption($event)"
+      ng-mouseleave="onMouseLeaveCaption($event)"
+      ng-click="removeFromSelectedAnimationList(animation)"
+      ng-show="animation.isSelected"
+    >
+      <i class="icon glyphicon glyphicon-remove" aria-hidden="true"></i>
+    </div>
+    <a class="caption caption-bottom" href="#/{{category.name}}/{{animation.name}}" title="View"
+      ng-mouseover="onMouseOverCaption($event)"
+      ng-mouseleave="onMouseLeaveCaption($event)"
+      ng-click="goToDetailView($event, animation)"
+    >
+      <span class="icon glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+    </a>
+    <div class="item-body">
+      <div class="content" style="background-color:{{animation.color}};"></div>
+      <p class="name">{{animation.name}}</p>
+    </div>
+
+  </div>
+ </div>
+</div>

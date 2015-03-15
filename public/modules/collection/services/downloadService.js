@@ -1,0 +1,1 @@
+!function(){function a(){var a={};return a.download=function(a,b){window.open("data:text/"+a+";charset=utf-8,"+encodeURIComponent(b))},a}angular.module("collection").factory("downloadService",a)}();

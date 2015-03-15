@@ -1,0 +1,53 @@
+
+<!-- - module mixin includes-->
+<div class="l-section row">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="m-title-subtitle">
+      <h3 class="be-animated">{{animation.name}}</h3>
+      <p>
+        By <strong>{{animation.author}}</strong> in
+        <a href="{{animation.sourceUrl}}">{{animation.source}}</a>
+      </p>
+      <p class="small">License: {{animation.license}}, <a href="{{animation.issues}}">Issues<a/>.</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="pull-right margin-top-20">
+      <div class="m-share-social be-animated">Share it!!<a href="" ng-click="shareTwitter($event)" class="first"><i class="fa fa-twitter be-animated"></i></a><a href="" ng-click="shareGooglePlus($event)" class="second"><i class="fa fa-google-plus be-animated"></i></a><a href="" ng-click="shareFacebook($event)" class="third"><i class="fa fa-facebook be-animated"></i></a></div>
+    </div>
+  </div>
+</div>
+<div class="l-section">
+  <div class="col-md-2 col-sm-3 col-xs-6">
+    <div ng-mouseover="onMouseOverItemSquare($event)" ng-mouseleave="onMouseLeaveItemSquare($event)" class="m-square-item">
+      <div style=" background-color:{{animation.color}}" class="content be-animated"></div>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-1">
+    <div class="m-code-editor">
+      <div class="tools pull-right btn-group">
+        <button title="Copy_to_clipboard" data-toggle="tooltip" data-placement="top" class="btn btn-default btn-sm copy-button"><i class="fa fa-copy"></i></button>
+        <button title="Download" ng-click="localSave()" class="btn btn-default btn-sm"><i class="fa fa-download"></i></button>
+      </div>
+      <div class="editor"></div>
+    </div>
+    
+    
+  </div>
+</div>
+<div class="l-section">
+  <div class="col-md-12">
+    <div class="col-md-6 col-sm-3 col-xs-12 col-md-offset-3">
+      <div class="m-button-bar">
+        <ul class="pager">
+          <button type="button" ng-click="showCSSCode()" ng-class="{active: editorMode==='css'}" class="btn btn-default btn-sm">CSS</button>
+          <button type="button" ng-click="showHTMLCode()" ng-class="{active: editorMode==='html'}" class="btn btn-default btn-sm">HTML</button>
+          <button type="button" ng-click="showJQueryCode()" ng-class="{active: editorMode==='jquery'}" class="btn btn-default btn-sm">JQuery</button>
+          <button type="button" ng-click="showAniJSCode()" ng-class="{active: editorMode==='anijs'}" class="btn btn-default btn-sm">AniJS</button>
+          <button ng-click="add(animation)" class="btn btn-default btn-sm"><i class="fa fa-plus"></i> to "My Anims"</button>
+          <button ng-click="removeFromSelectedAnimationList(animation)" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> of "My Anims"</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

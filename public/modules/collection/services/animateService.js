@@ -1,0 +1,1 @@
+!function(){function a(){var a={};return a.animateItems=function(a,b){var c=b,d=$(a);$.each(d,function(a,b){$(b).addClass(c),$(b).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(a){$(a.target).removeClass(c)})})},a}angular.module("collection").factory("animateService",a)}();

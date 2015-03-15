@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>AniCollection</title>
+  <!--build:css assets/styles/optimizedlibs.css-->
+  <link href="public/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="public/lib/snippets/css/snippets.css" rel="stylesheet">
+  <link href="public/lib/animatecss/animate.css" rel="stylesheet">
+  <link href="public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+</head>
+<body ng-app="AniCollection" ng-controller="collectionController">
+  <div class="l-navbar">
+    <div class="m-nav-bar">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display-->
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="http://localhost/anicollection/build" class="navbar-brand">AniCollection</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling-->
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown"><a data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Explore<span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                  <li><a href="submitions.html">Submitions</a></li>
+                  <li><a href="become-member.html">Become a member</a></li>
+                  <li><a href="faqs.html">FAQs</a></li>
+                  <li class="divider"></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="support.html">Support</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://anijs.github.io/" target="_blank">AniJS Studio</a></li>
+                  <li><a href="https://www.kickstarter.com/projects/888703031/anijs-studio" target="_blank">AniJS</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search" class="navbar-form navbar-left hidden-xs">
+              <div ng-hide="searchIsHidden" class="form-group m-input-search">
+                <div class="icon-addon addon-sm">
+                  <input id="search" ng-model="nameFilter" type="text" placeholder="Search ex: fadeIn" class="form-control">
+                  <label for="search" rel="tooltip" title="search" class="glyphicon glyphicon-search"></label>
+                </div>
+              </div>
+            </form>
+            <form class="navbar-form navbar-right hidden-xs">
+              <div class="form-group">
+                <div ng-click="toggleSelectedAnimationListPopover()" class="m-button-icon-label">
+                  <div ng-bind="selectedAnimationList.length" class="label">0</div>
+                  <button class="btn btn-primary">My Anims<em>  </em><span class="glyphicon glyphicon-download-alt"></span></button>
+                </div>
+                <div class="m-popover">
+                  <div ng-class="{'hidden':hideSelectedAnimationListPopover}" class="popover bottom hidden">
+                    <div class="arrow"></div>
+                    <div class="popover-title">
+                      <div class="m-button-bar">
+                        <ul class="pager m-0">
+                          <button type="button" ng-click="downloadCSSCode()" class="btn btn-default btn-sm">CSS</button>
+                          <button type="button" ng-click="downloadHTMLCode()" class="btn btn-default btn-sm">HTML</button>
+                          <button type="button" ng-click="downloadJQueryCode()" class="btn btn-default btn-sm">JQuery</button>
+                          <button type="button" ng-click="downloadAniJSCode()" class="btn btn-default btn-sm">AniJS</button>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="popover-content">
+                      <div class="row">
+                        <p ng-hide="selectedAnimationList.length &gt; 0" class="empty-content-message">Try to add some animations ;)</p>
+                        <div ng-mouseover="onMouseOverItemSquare($event)" ng-mouseleave="onMouseLeaveItemSquare($event)" ng-repeat="animation in selectedAnimationList" class="m-square-item col-md-4 col-sm-4 col-xs-4 pd-xsmall">
+                          <div style="background-color:{{animation.color}};" class="content be-animated small"></div><a ng-click="removeFromSelectedAnimationList(animation)" class="caption full"><span class="icon glyphicon glyphicon-remove"></span></a>
+                          <p ng-bind="animation.name" class="name"></p>
+                        </div>
+                      </div>
+                    </div><div class="m-divider-vertical mt-small"></div>
+                    <div class="popover-button-bar clearfix pd-small">
+                      <button type="button" ng-click="removeAll()" class="btn btn-warning btn-sm pull-right">Clear All</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="l-content"><div class="m-loading-icon" id="loading-icon" ng>
+       <div class="center">
+    <div class="spinner">
+     <div class="cube1 cubemove cube"></div>
+     <div class="cube2 cubemove cube"></div>
+     <div class="cube3 cubemove cube"></div>
+     <div class="cube4 cubemove cube"></div>
+    <span class="loading-message tada animated infinite">Loading...</span>
+    </div>
+       </div>
+    </div>
+    
+    
+    <div class="l-section">
+      <div class="container-fluid"></div>
+    </div>
+    <div on-finish-render="hideLoading" class="l-section">
+      <div class="container"><h2 id="become-a-member">Become a member</h2>
+<p>Welcome :)</p>
+<p>It will be a pleasure build a bridge together between web technologies and creative people.</p>
+<p>What you earn by becoming a member?</p>
+<ul>
+<li>The respect of the community.</li>
+<li>A place in the gallery of <a href="">honoured members</a>.</li>
+<li>Immediate response to your issues and questions.</li>
+</ul>
+<p>How to become a member?</p>
+<p>You should gather at least <strong>one</strong> of the following requirements.</p>
+<ul>
+<li>At least one approved <a href="">animation submition</a>.</li>
+<li>At least one <a href="https://github.com/anicollection/anicollection/pulls">merged</a> code contribution.</li>
+<li>Have written at least one tutorial or article about animations.</li>
+<li>Donations</li>
+</ul>
+
+      </div>
+    </div>
+    <div class="l-section">
+      <div class="container"><div class="m-divider-vertical mt-large mb-large"></div>
+      </div>
+    </div>
+    <div class="l-section">
+      <div class="container-fluid">
+        <div class="m-adds-three-columns">
+          <div class="row">
+            <div class="col-xs-4 col-md-4"><a href="#" class="thumbnail"><img src="public/assets/images/thumbail.svg" alt="..."></a></div>
+            <div class="col-xs-4 col-md-4"><a href="#" class="thumbnail"><img src="public/assets/images/thumbail.svg" alt="..."></a></div>
+            <div class="col-xs-4 col-md-4"><a href="#" class="thumbnail"><img src="public/assets/images/thumbail.svg" alt="123"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="l-footer">
+    <div class="m-footer">
+      <div class="row">
+        <div class="col-md-3 solid-border-right">
+          <div class="col-md-12 mb-small">Just another nerd ;)</div>
+          <div class="col-md-12"><img src="public/assets/images/dariel.png" class="img-circle"></div>
+          <div class="col-md-12 mt-small small">Made with <span class="bounceIn animated infinite">♥</span> by <a href="https://twitter.com/dariel_noel" target="_blank">@dariel_noel</a></div>
+        </div>
+        <div class="col-md-7">
+          <div class="col-md-1"></div>
+          <div class="col-md-3 text-left">
+            <h4>AniCollection</h4>
+            <ol class="list-unstyled">
+              <li class="divider"></li>
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/support">Support</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ol>
+          </div>
+          <div class="col-md-4 text-left">
+            <h4>Community</h4>
+            <ol class="list-unstyled">
+              <li class="divider"></li>
+              <li><a href="#/submitions">Submitions</a></li>
+              <li><a href="#/become-member">Become a member</a></li>
+            </ol>
+          </div>
+          <div class="col-md-4 text-left">
+            <h4>Projects</h4>
+            <ol class="list-unstyled">
+              <li class="divider"></li>
+              <li><a href="http://anijs.github.io/" target="_blank">AniJS</a></li>
+              <li><a href="https://www.kickstarter.com/projects/888703031/anijs-studio" target="_blank">AniJS Studio</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="m-share-social pull-right">
+            <div><a href="https://twitter.com/dariel_noel" target="_blank" class="first"><i class="fa fa-twitter be-animated"></i></a><a href="https://plus.google.com/+DarielNoelVilaPlagado" target="_blank" class="second"><i class="fa fa-google-plus be-animated"></i></a><a href="http://darielnoel.github.io/" target="_blank" class="third"><i class="fa fa-wordpress be-animated"></i></a></div>
+            <p class="col-md-12 mt-small small">Follow us!</p>
+          </div>
+        </div>
+        <div class="col-md-12 small pd-small copyright">© 2015 AniCollection All rights reserved</div>
+      </div>
+    </div>
+  </footer>
+  <script src="public/lib/jquery/jquery.min.js"></script>
+  <script src="public/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="public/lib/anijs/anijs-min.js"></script>
+  <script src="public/lib/anijs/helpers/dom/anijs-helper-dom.js"></script>
+  <!-- add custom scripts here-->
+  <script src="public/lib/angular/angular.js"></script>
+  <script src="public/lib/angular/angular-route.js"></script>
+  <script src="public/lib/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="public/script/app.js"></script>
+  <script src="public/modules/collection/index.js"></script>
+  <script src="public/modules/collection/services/dataRetrieveService.js"></script>
+  <script src="public/modules/collection/services/animateService.js"></script>
+  <script src="public/modules/collection/services/collectionHelperService.js"></script>
+  <script src="public/modules/collection/services/templateService.js"></script>
+  <script src="public/modules/collection/services/downloadService.js"></script>
+  <script src="public/modules/collection/directives/directives.js"></script>
+  <script src="public/modules/collection/controllers/collectionController.js"></script>
+  <script src="public/modules/collection/controllers/detailController.js"></script>
+  <script src="public/lib/mustache/mustache.js"></script>
+  <script src="public/lib/underscore/underscore-min.js"></script>
+  <script src="public/script/pages.js">
+  </script>
+</body>

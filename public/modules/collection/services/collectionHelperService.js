@@ -1,0 +1,1 @@
+!function(){function a(){var a={};return a.findModelbyName=function(a,b){var c=_.find(a,function(a){return a.name===b});return c},a.executeFunctionListToAnyModel=function(){},a}angular.module("collection").factory("collectionHelperService",a)}();
