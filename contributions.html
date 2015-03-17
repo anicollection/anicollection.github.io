@@ -105,6 +105,16 @@
              </div>
            </div>
       </div>
+      <div ng-controller="addsController" ng-show="showAdds" class="m-adds-modal">
+        <div>
+          <button type="button" ng-click="closeAdds()" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
+        <div class="content slideInRight animated">
+          <p ng-bind-html="currentAdd.title | to_trusted" class="title"></p><a href="{{currentAdd.url}}" target="_blank" class="image-href"><img src="{{currentAdd.imgSrc}}" data-anijs="if: mouseover, do: pulse animated" class="img-responsive"/></a>
+          <p class="sub-title"></p>
+          <p class="see-more"><a href="{{currentAdd.url}}" data-anijs="if: mouseover, on: .m-adds-modal, do: bounce animated" class="btn btn-danger">Take a look!!!</a></p>
+        </div>
+      </div>
       <div class="l-section">
         <div class="container-fluid"></div>
       </div>
@@ -209,6 +219,8 @@
     <script src="public/modules/collection/services/services.js"></script>
     <script src="public/modules/collection/directives/directives.js"></script>
     <script src="public/modules/collection/controllers/controllers.js"></script>
-    <script src="public/script/pages.js"></script><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-44521541-7', 'auto'); ga('send', 'pageview');</script>
+    <script src="public/script/pages.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- Place this tag in your head or just before your close body tag. --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-44521541-7', 'auto'); ga('send', 'pageview');</script>
   </body>
 </html>

@@ -14,16 +14,6 @@
         "title": "You can test all of these animations on the landing page of <strong>Apple</strong>...",
         "imgSrc": "public/assets/images/applehappy.png",
         "url": "https://www.kickstarter.com/projects/888703031/anijs-studio"
-      },
-      {
-        "title": "Would you like to play with it in a <strong>client's Website</strong>?",
-        "imgSrc": "public/assets/images/google.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anijs-studio"
-      },
-      {
-        "title": "Play with all of these in your <strong>company</strong> landing page ;)",
-        "imgSrc": "public/assets/images/applehappy.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anijs-studio"
       }
   ]
 }
