@@ -1,17 +1,17 @@
 {
   "addList":[
       {
-        "title": "You can test all of these animations in any WebPage.",
+        "title": "You can test all these animations in any WebPage.",
         "imgSrc": "public/assets/images/anijsstudio.png",
         "url": "https://www.kickstarter.com/projects/888703031/anijs-studio"
       },
       {
-        "title": "You can test all of these animations on the landing page of <strong>Google</strong>...",
+        "title": "You can test all these animations on the landing page of <strong>Google</strong>...",
         "imgSrc": "public/assets/images/google.png",
         "url": "https://www.kickstarter.com/projects/888703031/anijs-studio"
       },
       {
-        "title": "You can test all of these animations on the landing page of <strong>Apple</strong>...",
+        "title": "You can test your CSS3 animations on the landing page of <strong>Apple</strong>...",
         "imgSrc": "public/assets/images/applehappy.png",
         "url": "https://www.kickstarter.com/projects/888703031/anijs-studio"
       }
