@@ -27,6 +27,10 @@
     <div class="m-code-editor">
       <div class="tools pull-right btn-group">
         <button title="Copy_to_clipboard" data-toggle="tooltip" data-placement="top" class="btn btn-default btn-sm copy-button"><i class="fa fa-copy"></i></button>
+        <form action="http://codepen.io/pen/define" method="POST" target="_blank" ng-submit="editOnCodepen($event)" class="codepen-form">
+          <input type="hidden" name="data" value="{{codepenEditValue}}"/>
+          <button type="submit" title="Edit on CodePen" class="btn btn-default btn-sm"><i class="fa fa-codepen"></i></button>
+        </form>
         <button title="Download" ng-click="localSave()" class="btn btn-default btn-sm"><i class="fa fa-download"></i></button>
       </div>
       <div class="editor"></div>
