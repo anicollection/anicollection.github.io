@@ -7,20 +7,8 @@
         "buttonText": "Take a look!!!"
       },
       {
-        "title": "You can test all these animations on the landing page of <strong>Google</strong>...",
-        "imgSrc": "public/assets/images/google.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anijs-studio",
-        "buttonText": "Take a look!!!"
-      },
-      {
-        "title": "You can test your CSS3 animations on the landing page of <strong>Apple</strong>...",
-        "imgSrc": "public/assets/images/applehappy.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anijs-studio",
-        "buttonText": "Take a look!!!"
-      },
-      {
-        "title": "Would you like support us?",
-        "imgSrc": "public/assets/images/adds/coffecake.png",
+        "title": "We need your love for enhanced this Project...",
+        "imgSrc": "public/assets/images/adds/tasks.png",
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
         "buttonText": "Buy me a candy ;)"
       },
@@ -29,12 +17,6 @@
         "imgSrc": "public/assets/images/adds/love.png",
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
         "buttonText": "Buy me a lemonade ;)"
-      },
-      {
-        "title": "We need a CupCake to maintain this free Project...",
-        "imgSrc": "public/assets/images/adds/coffecake.png",
-        "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
-        "buttonText": "Buy the Cupake ;)"
       }
   ]
 }
