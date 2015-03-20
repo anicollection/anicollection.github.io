@@ -22,21 +22,20 @@
         "title": "Would you like support us?",
         "imgSrc": "public/assets/images/adds/coffecake.png",
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
-        "buttonText": "Donate via Paypal!!!"
+        "buttonText": "Buy the moon :)"
       },
       {
         "title": "We need your love for enhanced this Project...",
         "imgSrc": "public/assets/images/adds/love.png",
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
-        "buttonText": "Donate via Paypal!!!"
+        "buttonText": "Buy me a lemonade ;)"
       },
       {
         "title": "We need a CupCake to maintain this free Project...",
         "imgSrc": "public/assets/images/adds/coffecake.png",
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
-        "buttonText": "Donate via Paypal!!!"
+        "buttonText": "Buy the Cupake ;)"
       }
-
   ]
 }
 
