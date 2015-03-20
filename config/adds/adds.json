@@ -17,6 +17,12 @@
         "imgSrc": "public/assets/images/adds/love.png",
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
         "buttonText": "Buy me a lemonade ;)"
+      },
+      {
+        "title": "You can test all these animations on the landing page of <strong>Google</strong>...",
+        "imgSrc": "public/assets/images/google.png",
+        "url": "https://www.kickstarter.com/projects/888703031/anijs-studio",
+        "buttonText": "Take a look!!!"
       }
   ]
 }
