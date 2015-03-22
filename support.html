@@ -117,9 +117,9 @@
           <button type="button" ng-click="closeAdds()" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         </div>
         <div class="content slideInRight animated">
-          <p ng-bind-html="currentAdd.title | to_trusted" class="title"></p><a href="{{currentAdd.url}}" target="_blank" class="image-href"><img src="{{currentAdd.imgSrc}}" data-anijs="if: mouseover, do: pulse animated" class="img-responsive"/></a>
+          <p ng-bind-html="currentAdd.title | to_trusted" class="title"></p><a href="{{currentAdd.url}}" target="_blank" class="image-href"><img src="{{currentAdd.imgSrc}}" data-anijs="if: mouseover, do: pulse animated" onClick="_gaq.push(['_trackEvent', 'KickStarter', 'Big Image', 'Pretty Cool']);" class="img-responsive"/></a>
           <p class="sub-title"></p>
-          <p class="see-more"><a href="{{currentAdd.url}}" data-anijs="if: mouseover, on: .m-adds-modal, do: bounce animated" class="btn btn-danger">{{currentAdd.buttonText}}</a></p>
+          <p class="see-more"><a href="{{currentAdd.url}}" data-anijs="if: mouseover, on: .m-adds-modal, do: bounce animated" onClick="_gaq.push(['_trackEvent', 'KickStarter', 'Buttton', 'Pretty Cool']);" target="_blank" class="btn btn-danger">{{currentAdd.buttonText}}</a></p>
         </div>
       </div>
       <div class="l-section">
@@ -207,6 +207,6 @@
     <script src="public/modules/collection/controllers/controllers.js"></script>
     <script src="public/script/pages.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <!-- Place this tag in your head or just before your close body tag. --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-44521541-7', 'auto'); ga('send', 'pageview');</script>
+    <!-- Place this tag in your head or just before your close body tag. --><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-44521541-7"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();</script>
   </body>
 </html>
