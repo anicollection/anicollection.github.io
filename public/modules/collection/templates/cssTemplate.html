@@ -1,25 +1,38 @@
 /*base code*/
 
 .animated {
+{{#globalOptions.isCssPrefixed}}
   -webkit-animation-duration: 1s;
+{{/globalOptions.isCssPrefixed}}
   animation-duration: 1s;
+{{#globalOptions.isCssPrefixed}}
   -webkit-animation-fill-mode: both;
+{{/globalOptions.isCssPrefixed}}
   animation-fill-mode: both;
 }
 
 .animated.infinite {
+{{#globalOptions.isCssPrefixed}}
   -webkit-animation-iteration-count: infinite;
+{{/globalOptions.isCssPrefixed}}
   animation-iteration-count: infinite;
 }
 
 .animated.hinge {
+{{#globalOptions.isCssPrefixed}}
   -webkit-animation-duration: 2s;
+{{/globalOptions.isCssPrefixed}}
   animation-duration: 2s;
 }
 
 /*the animation definition*/
 
 {{#animationList}}
+{{#globalOptions.isCssPrefixed}}
 {{cssCode}}
+{{/globalOptions.isCssPrefixed}}
+{{^globalOptions.isCssPrefixed}}
+{{plainCssCode}}
+{{/globalOptions.isCssPrefixed}}
 {{\n}}
 {{/animationList}}

@@ -98,6 +98,25 @@
                         </div>
                 </div>
               </form>
+              <form class="navbar-form navbar-right hidden-xs options"><span class="glyphicon glyphicon-cog" aria-hidden="true" ng-click="toggleGlobalOptionsPopover()"></span>
+                      <div class="m-popover-options">
+                        <div ng-class="{'hidden':hideGlobalOptionsPopover}" class="popover bottom hidden">
+                          <div class="arrow"></div>
+                          <div class="popover-title">Configuration Options</div>
+                          <div class="popover-content">
+                            <form>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" ng-checked="globalOptions.isCssPrefixed" ng-click="toggleCssPrefixedCheckbox()"> prefix css
+                                </label>
+                              </div>
+                            </form>
+                          </div>
+                                <div class="m-divider-vertical mt-small"></div>
+                          <div class="popover-button-bar clearfix pd-small"></div>
+                        </div>
+                      </div>
+              </form>
             </div>
           </div>
         </nav>

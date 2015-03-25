@@ -7,5 +7,6 @@
     "source": "AniCollection",
     "sourceUrl": "https://github.com/anicollection/anicollection",
     "issues": "https://github.com/anicollection/anicollection/issues",
-    "license": "MIT"
+    "license": "MIT",
+    "plainCssCode": "@keyframes rotateDownRight {\n  0% {\n    transform-origin: right bottom;\n    transform: rotate3d(0, 0, 1, 45deg)\n  }\n  100% {\n    transform-origin: right bottom;\n    transform: none\n  }\n}\n\n.rotateDownRight {\n  animation-name: rotateDownRight\n}"
 }

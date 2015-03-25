@@ -7,5 +7,6 @@
     "source": "AniCollection",
     "sourceUrl": "https://github.com/anicollection/anicollection/",
     "issues": "https://github.com/anicollection/anicollection/issues",
-    "license": "MIT"
+    "license": "MIT",
+    "plainCssCode": "@keyframes rotate {\n  0% {\n    transform-origin: center;\n    transform: rotate3d(0, 0, 1, -200deg)\n  }\n  100% {\n    transform-origin: center;\n    transform: none\n  }\n}\n\n.rotate {\n  animation-name: rotate\n}"
 }
