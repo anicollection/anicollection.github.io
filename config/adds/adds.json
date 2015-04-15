@@ -7,24 +7,11 @@
         "buttonText": "Take a look!!!"
       },
       {
-        "title": "We're nearly there and we need your support :D",
-        "imgSrc": "public/assets/images/adds/anicollectionplus.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anicollection-plus",
-        "buttonText": "Go!!"
-      },
-      {
-        "title": "Thank you for backing our @kickstarter #crowdfunding campaign!",
-        "imgSrc": "public/assets/images/adds/anicollectionplus.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anicollection-plus",
-        "buttonText": "Go!!!"
-      },
-      {
-        "title": "A Visual Keyframe Editor for AniCollection...",
-        "imgSrc": "public/assets/images/adds/anicollectionplus.png",
-        "url": "https://www.kickstarter.com/projects/888703031/anicollection-plus",
-        "buttonText": "Go!!!"
+        "title": "We need your love for enhanced this Project...",
+        "imgSrc": "public/assets/images/adds/coffecake.png",
+        "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
+        "buttonText": "Gift me ;)"
       }
-
   ]
 }
 
