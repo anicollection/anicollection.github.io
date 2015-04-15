@@ -7,10 +7,10 @@
         "buttonText": "Take a look!!!"
       },
       {
-        "title": "We need your love for enhanced this Project...",
-        "imgSrc": "public/assets/images/adds/coffecake.png",
-        "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4YUHNKSXG545U",
-        "buttonText": "Gift me ;)"
+        "title": "Play with these CSS3 animations using AniJS...",
+        "imgSrc": "public/assets/images/adds/anijs.png",
+        "url": "http://anijs.github.io/",
+        "buttonText": "Take a look ;)"
       }
   ]
 }
